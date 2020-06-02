@@ -196,11 +196,13 @@ namespace lab8mc
             else
             {
                 
-                MessageBox.Show("TIENDA CREADA CON EXITO");
+                MessageBox.Show("CINE CREADO CON EXITO!!");
                 panel1.Visible = false;
                 panel2.Visible = false;
                 panel3.Visible = false;
+
             }
         }
     }
 }
+//g
