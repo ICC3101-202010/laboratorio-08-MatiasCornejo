@@ -130,9 +130,17 @@ namespace lab8mc
         private void btnLocales_Click(object sender, EventArgs e)
         {
             panel2.Visible = true;
+            listBox1.Items.Add("LISTA DE TIENDAS:");
+            listBox1.Items.Add("");
+            listBox1.Items.Add("");
+            listBox1.Items.Add("");
+            int s = 1;
             foreach(string x in listlocales)
             {
-                listBox1.Items.Add(x);
+                string d = Convert.ToString(s);
+                listBox1.Items.Add(d+") "+x);
+                listBox1.Items.Add("");
+                s += 1;
             }
         }
     }
