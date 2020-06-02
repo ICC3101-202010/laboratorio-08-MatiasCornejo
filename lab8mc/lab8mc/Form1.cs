@@ -143,5 +143,28 @@ namespace lab8mc
                 s += 1;
             }
         }
+
+        private void btnRevisarInformacion_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+            listBox1.Items.Add("INFORMACION DE TIENDAS :");
+            listBox1.Items.Add("");
+            listBox1.Items.Add("");
+            listBox1.Items.Add("");
+            int s = 1;
+            foreach (string x in listinftiendas)
+            {
+                string d = Convert.ToString(s);
+                listBox1.Items.Add(d + ") " + x);
+                listBox1.Items.Add("");
+                s += 1;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            listBox1.Items.Clear();
+        }
     }
 }

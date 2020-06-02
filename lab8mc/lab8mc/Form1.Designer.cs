@@ -52,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,6 +80,7 @@
             this.btnRevisarInformacion.TabIndex = 7;
             this.btnRevisarInformacion.Text = "Revisar informacion locales\r\n";
             this.btnRevisarInformacion.UseVisualStyleBackColor = false;
+            this.btnRevisarInformacion.Click += new System.EventHandler(this.btnRevisarInformacion_Click);
             // 
             // btnAgregarNuevoLocal
             // 
@@ -115,7 +117,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 524);
+            this.panel1.Size = new System.Drawing.Size(690, 576);
             this.panel1.TabIndex = 9;
             this.panel1.Visible = false;
             // 
@@ -300,26 +302,37 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(621, 514);
+            this.panel2.Size = new System.Drawing.Size(687, 561);
             this.panel2.TabIndex = 10;
             this.panel2.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(536, 506);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 35);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Volver";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(161, 109);
+            this.listBox1.Location = new System.Drawing.Point(53, 41);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(386, 355);
+            this.listBox1.Size = new System.Drawing.Size(612, 459);
             this.listBox1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 591);
+            this.ClientSize = new System.Drawing.Size(807, 591);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLocales);
@@ -361,6 +374,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
