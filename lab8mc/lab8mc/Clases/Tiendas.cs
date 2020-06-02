@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Clases
+namespace lab8mc.Clases
 {
-     public class Tiendas
+    class Tiendas
     {
-
         private string nombreTienda;
         private string nombreDueño;
         private string numeroIdentificador;
@@ -16,9 +15,9 @@ namespace WindowsFormsApp1.Clases
         private string horaCierreTienda;
 
 
-       
 
-        public Tiendas(string nombreTienda, string nombreDueño, string numeroIdentificador,string horaAperturaTienda,string horaCierreTienda)
+
+        public Tiendas(string nombreTienda, string nombreDueño, string numeroIdentificador, string horaAperturaTienda, string horaCierreTienda)
         {
             this.nombreTienda = nombreTienda;
             this.nombreDueño = nombreDueño;

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Clases
+namespace lab8mc.Clases
 {
     class Cines
     {
-
         private string nombreCine;
         private string nombreDueñoCine;
         private string numeroIdentificadorCine;
