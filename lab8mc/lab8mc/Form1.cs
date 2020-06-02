@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab8mc.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,10 @@ namespace lab8mc
             string horaAperturaTienda = txtHoraAperturatienda.Text;
             string horaCierreTienda = txtHoraCierrreTienda.Text;
 
+            
+
+            
+
             if (txtNombreTienda.Text == "" || txtnombredueño.Text == "" || txtIdTienda.Text == "" || txtHoraAperturatienda.Text == "" || txtHoraCierrreTienda.Text == "")
             {
                 MessageBox.Show("Rellene todos los datos para poder continuar");
@@ -51,7 +56,7 @@ namespace lab8mc
             }
             else if (radioButton1.Checked == true)
             {
-
+                
                 Clases.Tiendas tienda1 = new Clases.Tiendas(nombretienda, dueño, id, horaAperturaTienda, horaCierreTienda);
 
                 string inftiendas;
@@ -93,11 +98,15 @@ namespace lab8mc
 
             else if (radioButton4.Checked == true)
             {
-                Clases.Cines cine1 = new Clases.Cines(nombretienda, dueño, id, horaAperturaTienda, horaCierreTienda);
+                panel3.Visible = true;
+                string numSalasCine;
+                numSalasCine = txtCantidadSalas.Text;
+                Clases.Cines cine1 = new Clases.Cines(nombretienda, dueño, id, horaAperturaTienda, horaCierreTienda,numSalasCine);
+
                 listlocales.Add(cine1.NombreCine);
-                string infcines = "Nombre cine  = " + cine1.NombreCine + "Nombre Dueño= " + cine1.NombreDueñoCine + "id=" + cine1.NumeroIdentificadorCine + "Hora de apertura: " + cine1.HoraAperturaCine + "Hora de cierre: " + cine1.HoraCierreCine;
+                string infcines = "Nombre cine  = " + cine1.NombreCine + "Nombre Dueño= " + cine1.NombreDueñoCine + "id=" + cine1.NumeroIdentificadorCine + "Hora de apertura: " + cine1.HoraAperturaCine + "Hora de cierre: " + cine1.HoraCierreCine+"Numero de salas:"+cine1.NumSalasCine;
                 listinftiendas.Add(infcines);
-                MessageBox.Show("Cine creado con exito!!");
+                
                 txtHoraAperturatienda.Text = "";
                 txtHoraCierrreTienda.Text = "";
                 txtnombredueño.Text = "";
@@ -165,6 +174,33 @@ namespace lab8mc
         {
             panel2.Visible = false;
             listBox1.Items.Clear();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel1.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (txtCantidadSalas.Text == "")
+            {
+                MessageBox.Show("INGRESE LA CANTIDAD DE SALAS");
+            }
+            else
+            {
+                
+                MessageBox.Show("TIENDA CREADA CON EXITO");
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
+            }
         }
     }
 }
